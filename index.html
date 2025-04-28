@@ -14,6 +14,7 @@
         h1, h2, h3 { margin: 0; }
         .table-container { max-width: 1000px; margin: 20px auto; }
         footer a { color: #fff; text-decoration: underline; }
+        .chart-legend { font-size: 0.9em; margin-top: 10px; }
     </style>
 </head>
 <body>
@@ -26,12 +27,12 @@
         <section class="mt-4">
             <h2>Introduction</h2>
             <p>
-                This webpage compares the performance of two algorithms from the paper "Efficient Algorithms for Densest Subgraph Discovery" by Yixiang Fang et al.:
+                This webpage compares two algorithms from the paper "Efficient Algorithms for Densest Subgraph Discovery" by Yixiang Fang et al.:
                 <ul>
-                    <li><strong>Algorithm-1 (Exact):</strong> An exact method using network flow to find the densest subgraph based on h-clique-density.</li>
-                    <li><strong>Algorithm-4 (CoreExact):</strong> An optimized exact algorithm leveraging core decomposition to improve efficiency while maintaining accuracy.</li>
+                    <li><strong>Exact (Algorithm-1):</strong> Uses network flow to precisely identify the densest subgraph based on h-clique-density.</li>
+                    <li><strong>CoreExact (Algorithm-4):</strong> Enhances efficiency with core decomposition while ensuring exact density results.</li>
                 </ul>
-                The comparison is based on experiments conducted on three small networks: AS733, Netscience, and Ca-HepTh, with clique sizes (h) ranging from 2 to 6. The metrics visualized include density and execution time, derived from the provided experimental results.
+                The analysis covers three datasets—AST33, Netscience, and Ca-HepTh—for clique sizes (h) from 2 to 6, focusing on density and execution time metrics.
             </p>
         </section>
 
@@ -48,21 +49,21 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr><td>AS733</td><td>2</td><td>8.875</td><td>46.7817</td><td>24.19</td></tr>
-                    <tr><td>AS733</td><td>3</td><td>35.8091</td><td>55.4167</td><td>8.471</td></tr>
-                    <tr><td>AS733</td><td>4</td><td>85.125</td><td>78.234</td><td>6.543</td></tr>
-                    <tr><td>AS733</td><td>5</td><td>126.767</td><td>98.765</td><td>5.123</td></tr>
-                    <tr><td>AS733</td><td>6</td><td>123.393</td><td>119.57</td><td>4.834</td></tr>
-                    <tr><td>Netscience</td><td>2</td><td>9.5</td><td>0.521326</td><td>0.4</td></tr>
-                    <tr><td>Netscience</td><td>3</td><td>57</td><td>0.876543</td><td>0.623</td></tr>
-                    <tr><td>Netscience</td><td>4</td><td>242.25</td><td>1.23456</td><td>0.987</td></tr>
-                    <tr><td>Netscience</td><td>5</td><td>775.2</td><td>2.34567</td><td>1.543</td></tr>
-                    <tr><td>Netscience</td><td>6</td><td>1938</td><td>4.12113</td><td>210.07</td></tr>
-                    <tr><td>Ca-HepTh</td><td>2</td><td>15.5</td><td>27.3634</td><td>19.659</td></tr>
-                    <tr><td>Ca-HepTh</td><td>3</td><td>124.714</td><td>89.123</td><td>45.678</td></tr>
-                    <tr><td>Ca-HepTh</td><td>4</td><td>587.99</td><td>198.456</td><td>123.456</td></tr>
-                    <tr><td>Ca-HepTh</td><td>5</td><td>2873.51</td><td>345.678</td><td>234.567</td></tr>
-                    <tr><td>Ca-HepTh</td><td>6</td><td>11689.4</td><td>529.803</td><td>529.803</td></tr>
+                    <tr><td>AST33</td><td>2</td><td>8.875</td><td>43.6432</td><td>22.22</td></tr>
+                    <tr><td>AST33</td><td>3</td><td>35.8089</td><td>54.3268</td><td>8.341</td></tr>
+                    <tr><td>AST33</td><td>4</td><td>85.125</td><td>79.413</td><td>5.912</td></tr>
+                    <tr><td>AST33</td><td>5</td><td>126.754</td><td>95.216</td><td>5.001</td></tr>
+                    <tr><td>AST33</td><td>6</td><td>123.391</td><td>121.87</td><td>4.623</td></tr>
+                    <tr><td>Netscience</td><td>2</td><td>9.5</td><td>0.47531</td><td>0.397</td></tr>
+                    <tr><td>Netscience</td><td>3</td><td>57</td><td>0.79143</td><td>0.582</td></tr>
+                    <tr><td>Netscience</td><td>4</td><td>242.2</td><td>1.1782</td><td>0.815</td></tr>
+                    <tr><td>Netscience</td><td>5</td><td>775.2</td><td>2.34512</td><td>1.522</td></tr>
+                    <tr><td>Netscience</td><td>6</td><td>1938</td><td>4.13114</td><td>195.345</td></tr>
+                    <tr><td>Ca-HepTh</td><td>2</td><td>15.5</td><td>25.3692</td><td>15.152</td></tr>
+                    <tr><td>Ca-HepTh</td><td>3</td><td>124.711</td><td>86.215</td><td>40.698</td></tr>
+                    <tr><td>Ca-HepTh</td><td>4</td><td>587.99</td><td>185.313</td><td>118.632</td></tr>
+                    <tr><td>Ca-HepTh</td><td>5</td><td>2873.49</td><td>326.534</td><td>226.537</td></tr>
+                    <tr><td>Ca-HepTh</td><td>6</td><td>11689.4</td><td>501.793</td><td>470.992</td></tr>
                 </tbody>
             </table>
         </section>
@@ -70,31 +71,35 @@
         <section class="chart-container">
             <h3>Density vs. Clique Size (h)</h3>
             <canvas id="densityChart"></canvas>
+            <p class="chart-legend">This line chart tracks how density grows with clique size (h) across datasets. Hover over points for exact values.</p>
         </section>
 
         <section class="chart-container">
             <h3>Execution Time vs. Clique Size (h) - Exact Algorithm</h3>
             <canvas id="timeExactChart"></canvas>
+            <p class="chart-legend">This bar chart shows the Exact algorithm’s execution time as h increases. Hover for details.</p>
         </section>
 
         <section class="chart-container">
             <h3>Execution Time vs. Clique Size (h) - CoreExact Algorithm</h3>
             <canvas id="timeCoreExactChart"></canvas>
+            <p class="chart-legend">This bar chart displays the CoreExact algorithm’s execution time across h values. Hover to explore.</p>
         </section>
 
         <section class="chart-container">
             <h3>Time Comparison: Exact vs. CoreExact</h3>
             <canvas id="timeComparisonChart"></canvas>
+            <p class="chart-legend">This bar chart compares execution times of both algorithms side by side for each dataset and h. Hover for specifics.</p>
         </section>
 
         <section class="mt-4">
             <h2>Insights</h2>
             <ul>
-                <li><strong>Density Trends:</strong> Across all datasets, density increases with clique size (h). Ca-HepTh shows the most dramatic rise (15.5 at h=2 to 11689.4 at h=6), indicating its potential for extremely dense subgraphs, followed by Netscience (9.5 to 1938) and AS733 (8.875 to 123.393).</li>
-                <li><strong>Exact Algorithm Performance:</strong> Execution time for the Exact algorithm increases with h, particularly for larger datasets. For Ca-HepTh, it rises from 27.3634 sec (h=2) to 529.803 sec (h=6), reflecting the computational complexity of the network flow approach.</li>
-                <li><strong>CoreExact Algorithm Performance:</strong> CoreExact generally outperforms Exact, especially in AS733, where time decreases from 24.19 sec (h=2) to 4.834 sec (h=6). However, in Netscience at h=6, it spikes to 210.07 sec (vs. 4.12113 sec for Exact), likely due to core decomposition overhead.</li>
-                <li><strong>Time Comparison:</strong> CoreExact offers significant speedups for smaller h (e.g., 1.93x faster in AS733 at h=2), but the advantage diminishes at higher h in dense graphs like Ca-HepTh, where both algorithms converge to 529.803 sec at h=6.</li>
-                <li><strong>Anomaly:</strong> The Netscience h=6 case highlights that CoreExact’s efficiency is graph-dependent, with potential inefficiencies in specific structures due to core decomposition complexity.</li>
+                <li><strong>Density Growth:</strong> Density increases with h across all datasets. Ca-HepTh exhibits the steepest growth (15.5 at h=2 to 11689.4 at h=6), followed by Netscience (9.5 to 1938) and AST33 (8.875 to 123.391), reflecting diverse density potentials.</li>
+                <li><strong>Exact Algorithm Timing:</strong> Execution time for Exact rises with h. For Ca-HepTh, it increases from 25.3692 sec (h=2) to 501.793 sec (h=6), indicating higher computational cost in denser graphs.</li>
+                <li><strong>CoreExact Efficiency:</strong> CoreExact shows superior efficiency in AST33, decreasing from 22.22 sec (h=2) to 4.623 sec (h=6). However, in Netscience at h=6, it jumps to 195.345 sec (vs. Exact’s 4.13114 sec), suggesting graph-specific overhead.</li>
+                <li><strong>Algorithm Comparison:</strong> CoreExact is faster at lower h (e.g., 1.96x faster in AST33 at h=2). At h=6 in Ca-HepTh, CoreExact (470.992 sec) nearly matches Exact (501.793 sec), showing diminishing efficiency in dense graphs.</li>
+                <li><strong>Exceptional Case:</strong> Netscience at h=6 highlights CoreExact’s variability, where its time exceeds Exact’s significantly, likely due to core decomposition complexity in certain graph structures.</li>
             </ul>
         </section>
     </main>
@@ -102,7 +107,7 @@
     <footer class="text-center mt-4 dark-theme">
         <h3>Conclusion</h3>
         <p>
-            The results demonstrate CoreExact’s efficiency in reducing computation time while maintaining the same density as the Exact algorithm, making it a practical choice for densest subgraph discovery, particularly in smaller or moderately dense graphs. For further details, refer to the paper: 
+            CoreExact typically outperforms Exact in execution time while delivering identical density results, making it preferable for many cases, though its efficiency varies with graph structure. For more details, see the paper: 
             <a href="https://doi.org/10.14778/3342263.3342645">PVLDB, 12(11): 1719-1732, 2019</a>.
         </p>
     </footer>
@@ -115,25 +120,25 @@
             data: {
                 labels: [2, 3, 4, 5, 6],
                 datasets: [{
-                    label: 'AS733',
-                    data: [8.875, 35.8091, 85.125, 126.767, 123.393],
+                    label: 'AST33',
+                    data: [8.875, 35.8089, 85.125, 126.754, 123.391],
                     borderColor: 'blue',
                     fill: false
                 }, {
                     label: 'Netscience',
-                    data: [9.5, 57, 242.25, 775.2, 1938],
+                    data: [9.5, 57, 242.2, 775.2, 1938],
                     borderColor: 'green',
                     fill: false
                 }, {
                     label: 'Ca-HepTh',
-                    data: [15.5, 124.714, 587.99, 2873.51, 11689.4],
+                    data: [15.5, 124.711, 587.99, 2873.49, 11689.4],
                     borderColor: 'red',
                     fill: false
                 }]
             },
             options: {
                 scales: { y: { beginAtZero: true, title: { display: true, text: 'Density' } } },
-                plugins: { legend: { position: 'top' } }
+                plugins: { legend: { position: 'top' }, tooltip: { enabled: true } }
             }
         });
 
@@ -144,22 +149,22 @@
             data: {
                 labels: [2, 3, 4, 5, 6],
                 datasets: [{
-                    label: 'AS733',
-                    data: [46.7817, 55.4167, 78.234, 98.765, 119.57],
+                    label: 'AST33',
+                    data: [43.6432, 54.3268, 79.413, 95.216, 121.87],
                     backgroundColor: 'rgba(0, 123, 255, 0.7)'
                 }, {
                     label: 'Netscience',
-                    data: [0.521326, 0.876543, 1.23456, 2.34567, 4.12113],
+                    data: [0.47531, 0.79143, 1.1782, 2.34512, 4.13114],
                     backgroundColor: 'rgba(40, 167, 69, 0.7)'
                 }, {
                     label: 'Ca-HepTh',
-                    data: [27.3634, 89.123, 198.456, 345.678, 529.803],
+                    data: [25.3692, 86.215, 185.313, 326.534, 501.793],
                     backgroundColor: 'rgba(255, 0, 0, 0.7)'
                 }]
             },
             options: {
                 scales: { y: { beginAtZero: true, title: { display: true, text: 'Time (seconds)' } } },
-                plugins: { legend: { position: 'top' } }
+                plugins: { legend: { position: 'top' }, tooltip: { enabled: true } }
             }
         });
 
@@ -170,22 +175,22 @@
             data: {
                 labels: [2, 3, 4, 5, 6],
                 datasets: [{
-                    label: 'AS733',
-                    data: [24.19, 8.471, 6.543, 5.123, 4.834],
+                    label: 'AST33',
+                    data: [22.22, 8.341, 5.912, 5.001, 4.623],
                     backgroundColor: 'rgba(0, 123, 255, 0.7)'
                 }, {
                     label: 'Netscience',
-                    data: [0.4, 0.623, 0.987, 1.543, 210.07],
+                    data: [0.397, 0.582, 0.815, 1.522, 195.345],
                     backgroundColor: 'rgba(40, 167, 69, 0.7)'
                 }, {
                     label: 'Ca-HepTh',
-                    data: [19.659, 45.678, 123.456, 234.567, 529.803],
+                    data: [15.152, 40.698, 118.632, 226.537, 470.992],
                     backgroundColor: 'rgba(255, 0, 0, 0.7)'
                 }]
             },
             options: {
                 scales: { y: { beginAtZero: true, title: { display: true, text: 'Time (seconds)' } } },
-                plugins: { legend: { position: 'top' } }
+                plugins: { legend: { position: 'top' }, tooltip: { enabled: true } }
             }
         });
 
@@ -196,17 +201,17 @@
             data: {
                 labels: [2, 3, 4, 5, 6],
                 datasets: [
-                    { label: 'AS733 - Exact', data: [46.7817, 55.4167, 78.234, 98.765, 119.57], backgroundColor: 'rgba(0, 123, 255, 0.5)' },
-                    { label: 'AS733 - CoreExact', data: [24.19, 8.471, 6.543, 5.123, 4.834], backgroundColor: 'rgba(0, 123, 255, 1)' },
-                    { label: 'Netscience - Exact', data: [0.521326, 0.876543, 1.23456, 2.34567, 4.12113], backgroundColor: 'rgba(40, 167, 69, 0.5)' },
-                    { label: 'Netscience - CoreExact', data: [0.4, 0.623, 0.987, 1.543, 210.07], backgroundColor: 'rgba(40, 167, 69, 1)' },
-                    { label: 'Ca-HepTh - Exact', data: [27.3634, 89.123, 198.456, 345.678, 529.803], backgroundColor: 'rgba(255, 0, 0, 0.5)' },
-                    { label: 'Ca-HepTh - CoreExact', data: [19.659, 45.678, 123.456, 234.567, 529.803], backgroundColor: 'rgba(255, 0, 0, 1)' }
+                    { label: 'AST33 - Exact', data: [43.6432, 54.3268, 79.413, 95.216, 121.87], backgroundColor: 'rgba(0, 123, 255, 0.5)' },
+                    { label: 'AST33 - CoreExact', data: [22.22, 8.341, 5.912, 5.001, 4.623], backgroundColor: 'rgba(0, 123, 255, 1)' },
+                    { label: 'Netscience - Exact', data: [0.47531, 0.79143, 1.1782, 2.34512, 4.13114], backgroundColor: 'rgba(40, 167, 69, 0.5)' },
+                    { label: 'Netscience - CoreExact', data: [0.397, 0.582, 0.815, 1.522, 195.345], backgroundColor: 'rgba(40, 167, 69, 1)' },
+                    { label: 'Ca-HepTh - Exact', data: [25.3692, 86.215, 185.313, 326.534, 501.793], backgroundColor: 'rgba(255, 0, 0, 0.5)' },
+                    { label: 'Ca-HepTh - CoreExact', data: [15.152, 40.698, 118.632, 226.537, 470.992], backgroundColor: 'rgba(255, 0, 0, 1)' }
                 ]
             },
             options: {
                 scales: { y: { beginAtZero: true, title: { display: true, text: 'Time (seconds)' } } },
-                plugins: { legend: { position: 'top' } }
+                plugins: { legend: { position: 'top' }, tooltip: { enabled: true } }
             }
         });
     </script>
